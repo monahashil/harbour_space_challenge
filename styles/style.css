@@ -1,29 +1,53 @@
-* {box-sizing: border-box;}
+* {
+  box-sizing: border-box;
+ }
 
 body { 
-  margin:0;
-  font-family: Rubik;
+  font-family: 'monaco', Calibri, Candara,'Gill Sans', 'Gill Sans MT', 'Trebuchet MS', sans-serif;
+  font-weight: 200;
+  font-size: 24px;
+  font-style: normal;
+  color: #424141;
+} 
+
+h2, h3, h4{
+  font-family: 'Trebuchet MS';
+  color:#685DC5;
+  font-weight: 150;
+} 
+
+h1{
+  font-family: 'Trebuchet MS';
+  color: #685DC5;
+  font-weight: 250;
+  font-size: 35px;
+  font-weight: bold;
 }
 
 .header {
-  overflow: hidden;
+  position:fixed;
+  margin: 0%;
+  z-index:100;
+  top:0;
+  left: 0;
+  box-shadow:1px 1px 3px #989598;
   background-color: #FFFFFF;
-  padding: 10px 25px;
-  height: 60px;
+  padding: 6px 50px;
+  padding-bottom: 10px;
+  height: 90px;
   width: 100%;
 }
 
 .header a {
   float: left; 
   color: #FFFFFF;
+  font-size: 20;
   text-align: center;
   padding: 12px;
-  font-size: 18px; 
   line-height: 25px;
   border-radius: 50%;
-  text-decoration: #1dcc1d;
+  text-decoration: none;
 }
-
 
 .header a.active {
   background-color: dodgerblue;
@@ -31,144 +55,510 @@ body {
 }
 
 .header-right {
+  height: 78px;
+  width: 78px;
   float: right;
   border-radius: 50%;
   background: #099109;
-
 }
 
-.body {
+.header img {
+  width: 200px;
+}
+
+#circle{
+  position: absolute;
+  top: 15%;
+  left: 34%;
+  box-sizing: border-box;
+  font-size: 2.5vmin;
+  font-family: 'cousine', monospace;
+  text-transform: uppercase;
+  color: #bebbbc;
+  animation: turn 14s linear infinite;
+}
+
+.interaction {
+  top: 19%;
+  left: 29.8%;
+  position: absolute;
+  width: 95px;
+  height: 95px;
+  border-radius: 50%;
+  background: url(../images/interaction.png);
+  background-size: cover;
   overflow: hidden;
-  background-color: #FFFFFF;
-  padding: 90px 90px;
-  height: 1000px;
-  width: 100%;
 }
-.body a {
-  float: left; 
-  color: #FFFFFF;
-  background-color: #4F469C;
-  text-align: center;
-  padding: 15px;
-  text-decoration: #726bad;
-  font-size: 20px; 
-  line-height: 20px;
-  border-radius:25px;
-}
-.body-left a:hover{
-  background-color: #4F469C;
-  border-radius: 0px;
-}
+
 .body-left {
   float: left;
-  border-radius: 15px;
   background: #FFFFFF;
-  font-size: 24px;
+  width:40%;
+  padding-top: 90px;
+  padding-right: 10px;
+  padding-bottom: 5px;
+  padding-left: 60px;
 }
-/*.body-right a.active {
-  background-color: dodgerblue;
-  color: white;
-} */
+
+.body-left a {
+  float: left; 
+  color: #FFFFFF;
+  background-color: #685DC5;
+  text-align: center;
+  text-decoration: #726bad;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  border-radius:25px;
+  height: 50px;
+  width: 30%;
+}
+.body-left a:hover{
+  background-color: #3C237F;
+  border-radius:25px;
+}
+
 .body-right{
-  text-align: center;
-  background: #FFFFFF;
-  font-family: sans-serif;
-  font-weight: 100;
-}
-.body1-right {
-  float: right;
-  border-radius: 15px;
-  background: #FFFFFF;
-  font-size: 24px;
-  font-family: sans-serif;
-  font-weight: 100;
-}
-h1{
-  color: #4F469C;
-  font-weight: 100;
-  font-size: 40px;
-  margin: 40px 0px 20px;
-  font-family: Rubik;
+  padding-left: 50%;
+  padding-right: 2%;
+  padding-top:83px;
 }
 
-#clockdiv{
-  font-family: 'Times New Roman';
-  color: rgb(22, 19, 19);
-  display: inline-block;
-  font-weight: 100;
-  text-align: center;
-  font-size: 30px;
+.body-right #title {
+  display: none;
 }
 
-#clockdiv > div{
-  padding: 10px;
+.appclose {
+  padding-left: 20px;
+  padding-bottom: 23px;
+  border: 1px solid #b3b0b3;
+  border-radius: 6px;
+  width: 90%;
+}
+
+.appclose span{
+  padding-top: 10px;
   border-radius: 3px;
-  background: #aca7df;
   display: inline-block;
 }
 
-#clockdiv div > span{
-  padding: 15px;
-  border-radius: 3px;
-  background: #bbaeae;
-  display: inline-block;
+#duration{
+  padding-left: 20px;
+  border-radius: 6px;
+  width: 90%;
+  border: 1px solid #b3b0b3;
+  background-color: #FFFFFF;
 }
 
-.smalltext{
-  padding-top: 5px;
+th{
+  text-align: left;  
+  color:#685DC5;
+  font-weight: 100;
+  font-family: 'Trebuchet MS';
+}
+
+#background {
+  padding-left: 15px;
+  border-radius: 6px;
+  position: absolute;
+  top: 60%;
+  left: 55%;
+  z-index: -1;
+}
+
+.apprenticeship {
+  padding-left: 78px;
+  padding-top: 15%;
+  padding-bottom: 8%;
+}
+
+.image-border {
+  width: 400px;
+  height: 400px;
+  overflow: hidden;
+  border: 1.5px solid #e2e0e2;
+  border-radius: 50%;
+}
+
+.image-border .border {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.image-cropper {
+  width: 350px;
+  height: 350px;
+  position: absolute;
+  left: 105px;
+  top: 680px;
+  overflow: hidden;
+  border-radius: 50%;
+}
+
+.image-cropper .cropped {
+  display: inline;
+  margin: 0 auto;
+  height: 100%;
+  width: auto;
+}
+
+.about-apprenticeship {
+  width: 80%;
+  padding-left: 40%;
+  padding-bottom: 5px;
+  position: absolute;
+  left: 80px;
+  top: 690px;
+}
+
+footer{
+  text-align: center;
+  background: #3C237F;
+
+}
+
+.questions {
+  padding-left: 5%;
+  padding-right: 7%;
+}
+
+.questions table {
+  border-collapse: collapse;
+  font-size: 18px; 
+  width: 100%;
+}
+
+.questions tr {
+  border-bottom: 1pt solid #b3b0b3;
+  height: 100px;
+}
+
+.column1 {
+  width:30%;
+  font-size: 25px; 
+}
+
+.column2 {
+  width:40%;
+  font-size: 20px; 
+  color:#424141; 
+}
+
+
+select {
+  border: 1px solid #b3b0b3;
+  border-radius: 35px;
+  width: 220px;
+  height: 60px;
+  color:#685DC5;
+  font-weight: 300;
+  font-size: 15px;
+  padding: 1em;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  -ms-appearance: none;
+  background: url('../images/arrow.png');
+  background-repeat: no-repeat;
+  background-size: 15px 15px;
+  background-position: right;
+  background-origin: content-box;
+}
+
+.selected {
+  display: none;
+}
+
+[class*="answer"]{
+  padding-top: 20px;
+  display: none;
+  text-align: justify; 
+  text-justify: inter-word;
   font-size: 16px;
 }
-#duration{
-  font-family: 'Times New Roman';
-  display: box;
-  font-weight: 20;
+
+button {
+  border-radius: 50%;
+  border: 1px solid #b3b0b3;
   text-align: center;
-  font-size: 20px;
+  width: 50px;
+  height: 50px;
+  color: #b3b0b3;;
+  font-size: 30px;
+  cursor: pointer;
+  background-color: #FFFFFF;
 }
 
-#duration > div{
-  font-family: 'Rubik';
-  padding: 15px;
-  border-radius: 50%;
-  background-color: #ffffff;
-  display: inline-block;
+.carousel {
+  cursor: pointer;
 }
 
-#duration div > span{
-  padding: 15px;
-  border-radius: 50%;
+.carousel .slideshow-container {
+  width: 500px;
+  height: 250px;
+  border: 1px solid #b8b7b7; 
+  background-image: linear-gradient(0deg, #f3f3f3, #FFFFFF);
   display: inline-block;
-  font: #ffffff;
-  font-size: larger;
-  width: 120px;
-  height: 90px;
-  
+  border-radius: 6px;
+  transition: 0.1s ease;
+  margin-left: 400px;
+  margin-right: 700px;
+  font-size: 15px;
 }
-.bigtext{
-  padding-top: 30px;
-  font-size: 20px;
+
+.description{
+  text-align: justify; 
+  text-justify: inter-word;
+  padding-left: 10%;
+  width: 90%;
+  margin-top: 10%;
+  font-size: 18px;
 }
-.circle{
-  background-color: #cdcce2;
+.slideshow-container table {
+  width:100%; 
+  padding-left: 30px; 
+  padding-top: 20px; 
+  padding-bottom: 20px;
+  padding-right: 30px; 
+  background-color: #FFFFFF;
+}
+
+.carousel:hover .person {
+-moz-transform: scale(1.6);
+-webkit-transform: scale(1.6);
+transform: scale(1.6);
+}
+
+.person {
+  border-radius: 50%;
+  background-color: #685DC5;
+}
+
+.slider-background {
+  padding-top: 58%;
+  padding-left: 18%;
   width: 100px;
-  height: 100px;
-  border-radius: 50%;
-
+  position: absolute;
+  top: 60%;
+  z-index: -1;
 }
-.footer{
-  border-top-left-radius:100%;
-  border-top-right-radius:100%;
-  background: #675CC4;
 
+.slider-background img{
+  border: 1px solid #e2e0e2; 
+  object-fit: cover;
+  width: 845px;
+  height: 280px;
 }
-@media screen and (max-width: 500px) {
-  .header a {
-    float: none;
-    display: block;
-    text-align: left;
+
+/**************************************************************/
+@keyframes turn{
+  from{
+      transform: rotate(0deg);
+  }
+  to{
+      transform: rotate(360deg);
+  }
+}
+/**************************************************************/
+@media screen and (min-width: 768px) and (max-width: 1024px) { 
+  .content {
+    width: 100%;
+  }
+  h2, h3, h4{
+    font-weight: 200;
+  } 
+  
+  h1{
+    font-weight: 200;
+    font-size: 40px;
+  }
+
+  #circle{
+    top: 9%;
+    left: 90%;
   }
   
-  .header-right {
-    float: none;
+  .interaction {
+    top: 10%;
+    left: 79%;
+    width: 155px;
+    height: 155px;
+  }
+
+  .body-right #title {
+    display: block;
+  }
+
+  .body-right {
+    position: absolute;
+    padding-top:10%;
+    padding-left: 60px;
+    width:90%;
+  }
+
+  .body-left #title {
+    display: none;
+  }
+
+  .body-left {
+    padding-top:84%;
+    width:80%;
+  }
+
+  #background {
+    display: none;
+  }
+
+  .about-apprenticeship {
+    padding-top: 250px;
+    padding-left: 47%;
+    padding-right: 8%;
+    width: 100%;
+  }
+
+  .apprenticeship {
+    padding-left: 25px;
+    padding-top: 15%;
+  }
+
+  .image-cropper {
+    top: 1020px;
+    left: 8%;
+  }
+ 
+  .slider-background{
+    padding-top: 118%;
+    width: 100%;
+    padding-left: 7%;
+  }
+  
+  .slider-background img{
+    width: 100%;
+    height: 280px;
+  }
+
+  .carousel .slideshow-container {
+    width: 500px;
+    height: 350px;
+    margin-left: 165px;
+    margin-right: 700px;
+    font-size: 15px;
+  }
+
+  .column1 {
+    width:35%; 
+  }
+
+  .column2 {
+    width:35%; 
+  }
+
+
+}
+
+
+@media only screen and (min-width: 834px) and (max-width: 1194px) {
+  .content {
+    width: 100%;
+  }
+  h2, h3, h4{
+    font-weight: 200;
+  } 
+  
+  h1{
+    font-weight: 200;
+    font-size: 50px;
+  }
+
+  #circle{
+    top: 8%;
+    left: 90%;
+  }
+  
+  .interaction {
+    top: 9%;
+    left: 80%;
+    width: 160px;
+    height: 160px;
+  }
+
+  .body-right #title {
+    display: block;
+  }
+
+  .body-right {
+    position: absolute;
+    padding-top:10%;
+    padding-left: 60px;
+    width:90%;
+  }
+
+  .body-left #title {
+    display: none;
+  }
+
+  .body-left {
+    padding-top:78%;
+    width:80%;
+  }
+
+  #background {
+    display: none;
+  }
+
+  .about-apprenticeship {
+    padding-top: 280px;
+    padding-left: 45%;
+    padding-right: 8%;
+    width: 100%;
+  }
+
+  .apprenticeship {
+    padding-left: 27px;
+    padding-top: 19%;
+  }
+
+  .image-cropper {
+    top: 1030px;
+    left: 7%;
+  }
+ 
+  .slider-background{
+    width: 100%;
+    left:0;
+    right: 0;
+    padding-top: 98%;
+  }
+  
+  .slider-background img{
+    border: 1px solid #e2e0e2; 
+    object-fit: cover;
+    width: 3000; 
+    height: 280px; 
+  }
+
+  .carousel .slideshow-container {
+    width: 500px;
+    height: 350px;
+    margin-left: 195px;
+    margin-right: 700px;
+    font-size: 15px;
+  }
+
+  .column1 {
+    width:35%; 
+  }
+
+  .column2 {
+    width:35%; 
+  }
+
+
+}
+
+@media only screen and (min-width: 900px) and (max-width: 1440px) {
+  .content {
+    width: 100%;
   }
 }
